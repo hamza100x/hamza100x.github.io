@@ -1,0 +1,33 @@
+---
+import Card from "./Card/index.astro";
+import { SITE } from "../site-config";
+---
+
+<Card colSpan="md:col-span-1" rowSpan="md:row-span-6" title="About me">
+  <div class="flex flex-col gap-2">
+    <p class="sr-only">
+      Hi, I'm {SITE.author.firstName}, an AI student by day, local LLM tinkerer by night. I'm passionate about making machine learning actually work in production — clean pipelines, real data, measurable results. Currently based in Cottbus, open to opportunities across Germany.
+    </p>
+    <div aria-hidden="true" class="text-sm font-light">
+      <p class="text-sm font-light">
+        Hi, I'm {SITE.author.firstName}, an AI student by day, local LLM tinkerer by night. I'm passionate about making machine learning actually work in production — clean pipelines, real data, measurable results. Currently based in Cottbus, open to opportunities across Germany. {SITE.location.countryName}.
+      </p>
+      <br />
+      My primary tools of choice includes:
+      <ul class="list-disc list-inside">
+        <li>Python</li>
+        <li>PyTorch & TensorFlow</li>
+        <li>Scikit-learn</li>
+        <li>FastAPI</li>
+        <li>Docker & AWS</li>
+        <li>SQL</li>
+      </ul>
+      <p class="text-sm font-light mt-2">
+        I also have experience in signal processing, agentic AI pipelines, and edge ML deployment.
+      </p>
+    </div>
+    <p class="text-sm font-light">
+      Beyond the technical work, I'm passionate about following the latest AI research, exploring new AI tools, and keeping up with the fast-moving world of AI development. Outside of tech, I unwind with FPS games — mostly Counter-Strike and Valorant—and the occasional chess match.
+    </p>
+  </div>
+</Card>
