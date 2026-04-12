@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Sitemap: https://hamza100x.github.io/sitemap-index.xml
+Sitemap: https://hamza100x.github.io/sitemap-0.xml
