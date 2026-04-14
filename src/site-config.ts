@@ -19,6 +19,7 @@ export const SITE = {
     github: "https://github.com/hamza100x",
     linkedin: "https://www.linkedin.com/in/hamza100x/",
     medium: "https://x.com/hamza100x",
+    huggingface: "https://huggingface.co/hamza100x",
     email: "hamzadanish453@gmail.com",
   },
   visitedCountries: [
