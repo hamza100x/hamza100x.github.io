@@ -1,18 +1,27 @@
 ---
-title: "Hello, World"
-description: "this is a post example"
-pubDate: 2023-01-21
-category: "intro"
+title: "LoRA - Efficient Fine-Tuning Notes"
+description: "A practical summary of Low-Rank Adaptation (LoRA) for fine-tuning large language models."
+pubDate: 2026-03-30
+category: "paper"
 draft: false
 ---
 
-# Hi there!
+# LoRA: Low-Rank Adaptation of Large Language Models (2021)
 
-This Markdown file creates a page at `your-domain.com/blog/post1/`
+## Why it matters
 
-It probably isn't styled much, but Markdown does support:
+LoRA makes fine-tuning large models much cheaper by freezing base weights and training low-rank adapters.
 
-- **bold** and _italics._
-- lists
-- [links](https://astro.build)
-- and more!
+## Core idea
+
+Instead of updating full weight matrices, LoRA injects trainable rank-decomposition matrices into attention layers.
+
+## My key takeaways
+
+- Big reduction in trainable parameters and GPU memory usage.
+- Similar quality to full fine-tuning for many downstream tasks.
+- Great fit for personal projects and rapid experimentation.
+
+## Link
+
+- [Paper](https://arxiv.org/abs/2106.09685)

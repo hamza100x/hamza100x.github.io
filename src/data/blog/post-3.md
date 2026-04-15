@@ -1,18 +1,27 @@
 ---
-title: "Hello, World"
-description: "this is a post example"
-pubDate: 2023-01-21
-category: "intro"
+title: "RAG for Knowledge-Intensive NLP Tasks - Notes"
+description: "A short walkthrough of Retrieval-Augmented Generation and why grounding improves factual outputs."
+pubDate: 2026-04-08
+category: "paper"
 draft: false
 ---
 
-# Hi there!
+# Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks (2020)
 
-This Markdown file creates a page at `your-domain.com/blog/post1/`
+## Why I picked this paper
 
-It probably isn't styled much, but Markdown does support:
+RAG is foundational for building trustworthy assistants that can cite external knowledge.
 
-- **bold** and _italics._
-- lists
-- [links](https://astro.build)
-- and more!
+## Core idea
+
+The approach combines neural retrieval with sequence generation so the model conditions answers on retrieved passages.
+
+## My key takeaways
+
+- Retrieval quality is as important as generator quality.
+- Grounded generation helps reduce hallucinations.
+- RAG pipelines map well to production systems with vector databases.
+
+## Link
+
+- [Paper](https://arxiv.org/abs/2005.11401)

@@ -21,23 +21,23 @@ const posts = (await getCollection("blog"))?.sort(
 </script>
 
 <Layout
-  description="Software developer with strong focus on the user experience animations and micro interactions"
-  title={`${SITE.author.fullName} - Blog`}
+  description="A reading log of AI and ML papers with practical notes, takeaways, and implementation insights."
+  title={`${SITE.author.fullName} - Papers I Read`}
 >
   <main
     class="w-screen h-screen flex flex-col justify-start items-start max-w-3xl mx-auto p-8"
   >
     <a
-      class="text-white bg-neutral-900 hover:bg-neutral-800 px-4 py-2 mb-8 border-1 border-solid border-neutral-600 rounded-lg"
+      class="text-primary-100 bg-darkslate-900 hover:bg-darkslate-800 hover:border-primary-500 px-4 py-2 mb-8 border-1 border-solid border-darkslate-400 rounded-lg transition-all duration-200"
       href="/">Back</a
     >
-    <h1 class="text-4xl font-bold mb-4 text-neutral-100">Posts</h1>
+    <h1 class="text-4xl font-bold mb-4 text-neutral-100">Papers I Read</h1>
     <ul class="w-full">
       {
         posts?.map((post) => (
           <PostRow
-            date={post.data.pubDate || new Date()}
             id={post.id}
+            description={post.data.description || "No description"}
             title={post.data.title || "No title"}
           />
         ))
