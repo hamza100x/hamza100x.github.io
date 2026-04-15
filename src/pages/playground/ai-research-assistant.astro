@@ -115,13 +115,3 @@ import { SITE } from "../../site-config";
     }
   });
 </script>
-
-<script>
-  // This page has no motion loader animation, so hide the global loader directly.
-  document.addEventListener("DOMContentLoaded", () => {
-    const loader = document.querySelector(".loader");
-    if (loader) {
-      loader.remove();
-    }
-  });
-</script>
