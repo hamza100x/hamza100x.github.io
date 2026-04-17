@@ -20,6 +20,7 @@ export const SITE = {
     linkedin: "https://www.linkedin.com/in/hamza100x/",
     medium: "https://x.com/hamza100x",
     huggingface: "https://huggingface.co/hamza100x",
+    kaggle: "https://www.kaggle.com/hamza100x",
     email: "hamzadanish453@gmail.com",
   },
   visitedCountries: [
