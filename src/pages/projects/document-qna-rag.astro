@@ -1,0 +1,99 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { SITE } from "../../site-config";
+---
+
+<Layout
+  title={`${SITE.author.fullName} - Projects - Document Q&A (RAG)`}
+  description="Upload a PDF and ask questions about it. Uses sentence-transformers, FAISS, and a Hugging Face-hosted LLM."
+>
+  <main class="w-full min-h-screen px-4 py-8 md:px-8 md:py-12 text-white max-w-4xl mx-auto">
+    <a
+      href="/projects"
+      class="inline-flex items-center gap-2 text-primary-100 hover:text-primary-100 bg-darkslate-900 hover:bg-darkslate-800 hover:border-primary-500 w-fit px-4 py-2 border border-darkslate-400 rounded-lg transition-all duration-200"
+      >← Back</a
+    >
+
+    <div class="mt-10 mb-8">
+      <h1 class="text-4xl md:text-5xl font-bold text-neutral-50 mb-3">
+        Document Q&A (RAG)
+      </h1>
+      <p class="text-neutral-300 text-lg leading-relaxed max-w-3xl">
+        Upload a PDF, index its contents, and ask questions against the document.
+        The app uses sentence-transformers for embeddings, FAISS for retrieval,
+        and a Hugging Face-hosted LLM for grounded answers.
+      </p>
+    </div>
+
+    <section class="grid gap-5 md:grid-cols-2 mb-8">
+      <article class="group rounded-lg border border-darkslate-400 hover:border-primary-500 bg-darkslate-500 p-6 transition-all duration-300">
+        <div class="flex items-center gap-2 mb-3">
+          <div class="w-1 h-6 bg-gradient-to-b from-primary-400 to-primary-700 rounded-full"></div>
+          <h2 class="text-lg font-semibold text-neutral-100">Project Overview</h2>
+        </div>
+        <p class="text-neutral-300 leading-relaxed">
+          A demo-friendly retrieval pipeline that turns a static PDF into an interactive
+          question-answering experience with document-aware responses.
+        </p>
+      </article>
+
+      <article class="group rounded-lg border border-darkslate-400 hover:border-primary-500 bg-darkslate-500 p-6 transition-all duration-300">
+        <div class="flex items-center gap-2 mb-3">
+          <div class="w-1 h-6 bg-gradient-to-b from-primary-400 to-primary-700 rounded-full"></div>
+          <h2 class="text-lg font-semibold text-neutral-100">Tech Stack</h2>
+        </div>
+        <ul class="space-y-2">
+          <li class="text-neutral-300 flex items-center"><span class="mr-3">→</span> sentence-transformers embeddings</li>
+          <li class="text-neutral-300 flex items-center"><span class="mr-3">→</span> FAISS vector retrieval</li>
+          <li class="text-neutral-300 flex items-center"><span class="mr-3">→</span> Hugging Face-hosted LLM</li>
+          <li class="text-neutral-300 flex items-center"><span class="mr-3">→</span> PDF upload and Q&A workflow</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="rounded-lg border border-darkslate-400 hover:border-primary-500 bg-darkslate-500 p-6 mb-8 transition-all duration-300">
+      <div class="flex items-center gap-2 mb-4">
+        <div class="w-1 h-7 bg-gradient-to-b from-primary-400 to-primary-700 rounded-full"></div>
+        <h2 class="text-lg font-semibold text-neutral-100">Key Features</h2>
+      </div>
+      <ul class="space-y-2 ml-3">
+        <li class="text-neutral-300 flex items-start gap-3">
+          <span class="text-primary-500 mt-1 flex-shrink-0">✓</span>
+          <span>Upload a PDF and extract searchable chunks automatically</span>
+        </li>
+        <li class="text-neutral-300 flex items-start gap-3">
+          <span class="text-primary-500 mt-1 flex-shrink-0">✓</span>
+          <span>Retrieve the most relevant passages with FAISS similarity search</span>
+        </li>
+        <li class="text-neutral-300 flex items-start gap-3">
+          <span class="text-primary-500 mt-1 flex-shrink-0">✓</span>
+          <span>Generate grounded answers from the uploaded document context</span>
+        </li>
+        <li class="text-neutral-300 flex items-start gap-3">
+          <span class="text-primary-500 mt-1 flex-shrink-0">✓</span>
+          <span>Simple interface that works well as a portfolio demo</span>
+        </li>
+      </ul>
+    </section>
+
+    <section class="rounded-lg border border-darkslate-400 hover:border-primary-500 bg-darkslate-500 p-6 transition-all duration-300">
+      <div class="flex items-center gap-2 mb-4">
+        <div class="w-1 h-7 bg-gradient-to-b from-primary-400 to-primary-700 rounded-full"></div>
+        <h2 class="text-lg font-semibold text-neutral-100">Project Focus</h2>
+      </div>
+      <p class="text-neutral-300 leading-relaxed">
+        This project is designed to showcase practical RAG fundamentals: document ingestion,
+        chunking, embedding generation, vector search, and answer synthesis from retrieved context.
+      </p>
+    </section>
+  </main>
+</Layout>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const loader = document.querySelector(".loader");
+    if (loader) {
+      loader.remove();
+    }
+  });
+</script>

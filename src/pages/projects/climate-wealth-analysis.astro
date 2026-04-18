@@ -1,0 +1,139 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { SITE } from "../../site-config";
+---
+
+<Layout
+  title={`${SITE.author.fullName} - Projects - Climate and Wealth Analysis`}
+  description="A data analysis pipeline that explores how climate variables relate to GDP per capita across countries."
+>
+  <main class="w-full min-h-screen px-4 py-8 md:px-8 md:py-12 text-white max-w-4xl mx-auto">
+    <a
+      href="/projects"
+      class="inline-flex items-center gap-2 text-primary-100 hover:text-primary-100 bg-darkslate-900 hover:bg-darkslate-800 hover:border-primary-500 w-fit px-4 py-2 border border-darkslate-400 rounded-lg transition-all duration-200"
+      >← Back</a
+    >
+
+    <div class="mt-10 mb-8">
+      <h1 class="text-4xl md:text-5xl font-bold text-neutral-50 mb-3">
+        Climate and Wealth Analysis
+      </h1>
+      <p class="text-neutral-300 text-lg leading-relaxed max-w-3xl">
+        A data analysis pipeline that explores how climate variables like temperature
+        and latitude relate to GDP per capita across 160+ countries.
+      </p>
+    </div>
+
+    <section class="grid gap-5 md:grid-cols-2 mb-8">
+      <article class="group rounded-lg border border-darkslate-400 hover:border-primary-500 bg-darkslate-500 p-6 transition-all duration-300">
+        <div class="flex items-center gap-2 mb-3">
+          <div class="w-1 h-6 bg-gradient-to-b from-primary-400 to-primary-700 rounded-full"></div>
+          <h2 class="text-lg font-semibold text-neutral-100">Project Overview</h2>
+        </div>
+        <p class="text-neutral-300 leading-relaxed">
+          The project merges local CSV sources, builds a country-level dataset,
+          and tests how climate variables correlate with national wealth.
+        </p>
+      </article>
+
+      <article class="group rounded-lg border border-darkslate-400 hover:border-primary-500 bg-darkslate-500 p-6 transition-all duration-300">
+        <div class="flex items-center gap-2 mb-3">
+          <div class="w-1 h-6 bg-gradient-to-b from-primary-400 to-primary-700 rounded-full"></div>
+          <h2 class="text-lg font-semibold text-neutral-100">Tech Stack</h2>
+        </div>
+        <ul class="space-y-2">
+          <li class="text-neutral-300 flex items-center"><span class="mr-3">→</span> Python data pipeline</li>
+          <li class="text-neutral-300 flex items-center"><span class="mr-3">→</span> OLS regression analysis</li>
+          <li class="text-neutral-300 flex items-center"><span class="mr-3">→</span> Matplotlib and Plotly visualizations</li>
+          <li class="text-neutral-300 flex items-center"><span class="mr-3">→</span> World map and regional summaries</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="rounded-lg border border-darkslate-400 hover:border-primary-500 bg-darkslate-500 p-6 mb-8 transition-all duration-300">
+      <div class="flex items-center gap-2 mb-4">
+        <div class="w-1 h-7 bg-gradient-to-b from-primary-400 to-primary-700 rounded-full"></div>
+        <h2 class="text-lg font-semibold text-neutral-100">What It Does</h2>
+      </div>
+      <ul class="space-y-2 ml-3">
+        <li class="text-neutral-300 flex items-start gap-3">
+          <span class="text-primary-500 mt-1 flex-shrink-0">✓</span>
+          <span>Loads and normalizes GDP, temperature, coordinates, and region data</span>
+        </li>
+        <li class="text-neutral-300 flex items-start gap-3">
+          <span class="text-primary-500 mt-1 flex-shrink-0">✓</span>
+          <span>Fits three regression models to compare climate predictors</span>
+        </li>
+        <li class="text-neutral-300 flex items-start gap-3">
+          <span class="text-primary-500 mt-1 flex-shrink-0">✓</span>
+          <span>Generates charts, diagnostics, and an interactive world map</span>
+        </li>
+        <li class="text-neutral-300 flex items-start gap-3">
+          <span class="text-primary-500 mt-1 flex-shrink-0">✓</span>
+          <span>Highlights overperforming and underperforming countries relative to the model</span>
+        </li>
+      </ul>
+    </section>
+
+    <section class="grid gap-5 md:grid-cols-2 mb-8">
+      <article class="rounded-lg border border-darkslate-400 hover:border-primary-500 bg-darkslate-500 p-6 transition-all duration-300">
+        <div class="flex items-center gap-2 mb-4">
+          <div class="w-1 h-7 bg-gradient-to-b from-primary-400 to-primary-700 rounded-full"></div>
+          <h2 class="text-lg font-semibold text-neutral-100">Key Findings</h2>
+        </div>
+        <ul class="space-y-2">
+          <li class="text-neutral-300 flex items-start gap-3">
+            <span class="text-primary-500 mt-1 flex-shrink-0">•</span>
+            <span>Latitude is a stronger predictor of GDP than temperature.</span>
+          </li>
+          <li class="text-neutral-300 flex items-start gap-3">
+            <span class="text-primary-500 mt-1 flex-shrink-0">•</span>
+            <span>Adding temperature to latitude gives only a small R² gain.</span>
+          </li>
+          <li class="text-neutral-300 flex items-start gap-3">
+            <span class="text-primary-500 mt-1 flex-shrink-0">•</span>
+            <span>Residuals show that non-climate factors still explain most of the variance.</span>
+          </li>
+        </ul>
+      </article>
+
+      <article class="rounded-lg border border-darkslate-400 hover:border-primary-500 bg-darkslate-500 p-6 transition-all duration-300">
+        <div class="flex items-center gap-2 mb-4">
+          <div class="w-1 h-7 bg-gradient-to-b from-primary-400 to-primary-700 rounded-full"></div>
+          <h2 class="text-lg font-semibold text-neutral-100">Repository Focus</h2>
+        </div>
+        <p class="text-neutral-300 leading-relaxed">
+          The repo is structured as a reproducible analysis project with data inputs,
+          a scripted pipeline, and generated outputs that make the statistical story easy to review.
+        </p>
+      </article>
+    </section>
+
+    <section class="rounded-lg border border-darkslate-400 hover:border-primary-500 bg-darkslate-500 p-6 transition-all duration-300">
+      <div class="flex items-center gap-2 mb-4">
+        <div class="w-1 h-7 bg-gradient-to-b from-primary-400 to-primary-700 rounded-full"></div>
+        <h2 class="text-lg font-semibold text-neutral-100">Source</h2>
+      </div>
+      <div class="flex flex-wrap gap-3">
+        <a
+          href="https://github.com/hamza100x/climate-wealth-analysis"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="group/btn inline-flex items-center gap-2 text-primary-100 bg-darkslate-900 hover:bg-darkslate-800 hover:border-primary-500 px-5 py-2.5 border border-darkslate-400 rounded-lg transition-all duration-200"
+        >
+          <span>GitHub Repo</span>
+          <span class="group-hover/btn:translate-x-1 transition-transform duration-200">↗</span>
+        </a>
+      </div>
+    </section>
+  </main>
+</Layout>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const loader = document.querySelector(".loader");
+    if (loader) {
+      loader.remove();
+    }
+  });
+</script>

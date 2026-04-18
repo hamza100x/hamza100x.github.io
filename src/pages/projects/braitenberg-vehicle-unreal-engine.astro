@@ -1,0 +1,105 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { SITE } from "../../site-config";
+---
+
+<Layout
+  title={`${SITE.author.fullName} - Projects - Braitenberg Vehicle Simulation`}
+  description="A Braitenberg vehicle simulation in Unreal Engine 5 with customizable sensor, motor, and morphology settings."
+>
+  <main class="w-full min-h-screen px-4 py-8 md:px-8 md:py-12 text-white max-w-4xl mx-auto">
+    <a
+      href="/projects"
+      class="inline-flex items-center gap-2 text-primary-100 hover:text-primary-100 bg-darkslate-900 hover:bg-darkslate-800 hover:border-primary-500 w-fit px-4 py-2 border border-darkslate-400 rounded-lg transition-all duration-200"
+      >← Back</a
+    >
+
+    <div class="mt-10 mb-8">
+      <h1 class="text-4xl md:text-5xl font-bold text-neutral-50 mb-3">
+        Braitenberg Vehicle Simulation
+      </h1>
+      <p class="text-neutral-300 text-lg leading-relaxed max-w-3xl">
+        A simulation of Braitenberg vehicles inspired by cybernetic thought experiments,
+        built in Unreal Engine 5 to demonstrate emergent behavior from simple sensorimotor links.
+      </p>
+    </div>
+
+    <section class="grid gap-5 md:grid-cols-2 mb-8">
+      <article class="group rounded-lg border border-darkslate-400 hover:border-primary-500 bg-darkslate-500 p-6 transition-all duration-300">
+        <div class="flex items-center gap-2 mb-3">
+          <div class="w-1 h-6 bg-gradient-to-b from-primary-400 to-primary-700 rounded-full"></div>
+          <h2 class="text-lg font-semibold text-neutral-100">Project Overview</h2>
+        </div>
+        <p class="text-neutral-300 leading-relaxed">
+          The project simulates multiple Braitenberg vehicle models and lets users observe
+          how small changes in sensors and actuators create complex behaviors.
+        </p>
+      </article>
+
+      <article class="group rounded-lg border border-darkslate-400 hover:border-primary-500 bg-darkslate-500 p-6 transition-all duration-300">
+        <div class="flex items-center gap-2 mb-3">
+          <div class="w-1 h-6 bg-gradient-to-b from-primary-400 to-primary-700 rounded-full"></div>
+          <h2 class="text-lg font-semibold text-neutral-100">Tech Stack</h2>
+        </div>
+        <ul class="space-y-2">
+          <li class="text-neutral-300 flex items-center"><span class="mr-3">→</span> Unreal Engine 5</li>
+          <li class="text-neutral-300 flex items-center"><span class="mr-3">→</span> Physics-based simulation</li>
+          <li class="text-neutral-300 flex items-center"><span class="mr-3">→</span> Customizable vehicle parameters</li>
+          <li class="text-neutral-300 flex items-center"><span class="mr-3">→</span> Educational visualization tools</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="rounded-lg border border-darkslate-400 hover:border-primary-500 bg-darkslate-500 p-6 mb-8 transition-all duration-300">
+      <div class="flex items-center gap-2 mb-4">
+        <div class="w-1 h-7 bg-gradient-to-b from-primary-400 to-primary-700 rounded-full"></div>
+        <h2 class="text-lg font-semibold text-neutral-100">What It Does</h2>
+      </div>
+      <ul class="space-y-2 ml-3">
+        <li class="text-neutral-300 flex items-start gap-3">
+          <span class="text-primary-500 mt-1 flex-shrink-0">✓</span>
+          <span>Simulates different Braitenberg vehicle models and sensor setups</span>
+        </li>
+        <li class="text-neutral-300 flex items-start gap-3">
+          <span class="text-primary-500 mt-1 flex-shrink-0">✓</span>
+          <span>Exposes parameters for sensor sensitivity, motor speed, and morphology</span>
+        </li>
+        <li class="text-neutral-300 flex items-start gap-3">
+          <span class="text-primary-500 mt-1 flex-shrink-0">✓</span>
+          <span>Uses Unreal Engine physics to create a realistic environment</span>
+        </li>
+        <li class="text-neutral-300 flex items-start gap-3">
+          <span class="text-primary-500 mt-1 flex-shrink-0">✓</span>
+          <span>Provides educational materials for understanding emergent behavior</span>
+        </li>
+      </ul>
+    </section>
+
+    <section class="rounded-lg border border-darkslate-400 hover:border-primary-500 bg-darkslate-500 p-6 transition-all duration-300">
+      <div class="flex items-center gap-2 mb-4">
+        <div class="w-1 h-7 bg-gradient-to-b from-primary-400 to-primary-700 rounded-full"></div>
+        <h2 class="text-lg font-semibold text-neutral-100">Source</h2>
+      </div>
+      <div class="flex flex-wrap gap-3">
+        <a
+          href="https://github.com/hamza100x/braitenberg-vehicle-unreal-engine"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="group/btn inline-flex items-center gap-2 text-primary-100 bg-darkslate-900 hover:bg-darkslate-800 hover:border-primary-500 px-5 py-2.5 border border-darkslate-400 rounded-lg transition-all duration-200"
+        >
+          <span>GitHub Repo</span>
+          <span class="group-hover/btn:translate-x-1 transition-transform duration-200">↗</span>
+        </a>
+      </div>
+    </section>
+  </main>
+</Layout>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const loader = document.querySelector(".loader");
+    if (loader) {
+      loader.remove();
+    }
+  });
+</script>
