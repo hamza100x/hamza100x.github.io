@@ -17,9 +17,6 @@ const siteNoTrailingSlash = site.endsWith("/") ? site.slice(0, -1) : site;
 
 // https://astro.build/config
 export default defineConfig({
-  experimental: {
-    svgo: true,
-  },
   fonts: [
     {
       provider: fontProviders.local(),
