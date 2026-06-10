@@ -1,0 +1,22 @@
+---
+interface Props {
+  href: string;
+  target?: string;
+  rel?: string;
+  class?: string;
+}
+
+const { href, target, rel, class: customClass, ...props } = Astro.props;
+const isExternal = href.startsWith("http");
+const defaultRel = isExternal ? "noopener noreferrer" : undefined;
+---
+
+<a
+  href={href}
+  target={target ?? (isExternal ? "_blank" : undefined)}
+  rel={rel ?? defaultRel}
+  class={`group/btn inline-flex items-center gap-2 text-primary-100 bg-darkslate-900 hover:bg-darkslate-800 hover:border-primary-500 px-5 py-2.5 border border-darkslate-400 rounded-lg transition-all duration-200 ${customClass ?? ""}`}
+  {...props}
+>
+  <slot />
+</a>
