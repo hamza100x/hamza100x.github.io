@@ -73,10 +73,10 @@ import { SITE } from "../site-config";
     >
       <div class="h-full w-full absolute inset-0 -z-10">
         <div class="hidden md:block h-full w-full">
-          <Globe client:media="(min-width: 768px)" />
+          <Globe client:idle />
         </div>
         <div class="block md:hidden h-full w-full">
-          <Globe client:media="(max-width: 768px)" isStatic={true} />
+          <Globe client:idle isStatic={true} />
         </div>
       </div>
     </Card>
