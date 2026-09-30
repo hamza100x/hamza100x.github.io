@@ -11,7 +11,6 @@ Passionate about ML engineering, agentic AI pipelines, and local LLM inference.
 ## Tech Stack
 - [Astro](https://astro.build)
 - [UnoCSS](https://unocss.dev/)
-- [Svelte](https://svelte.dev/)
 - [Solid.js](https://solidjs.com/)
 
 ## Run Locally
