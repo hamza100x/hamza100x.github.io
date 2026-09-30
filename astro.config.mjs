@@ -7,8 +7,6 @@ import icon from "astro-icon";
 import solidJs from "@astrojs/solid-js";
 import { remarkReadingTime } from "./src/lib/remark-reading-time.mjs";
 
-<<<<<<< HEAD
-
 const envSiteUrl = process.env.SITE_URL ?? "https://hamza100x.github.io";
 const site = envSiteUrl.endsWith("/") ? envSiteUrl : `${envSiteUrl}/`;
 const siteNoTrailingSlash = site.endsWith("/") ? site.slice(0, -1) : site;
