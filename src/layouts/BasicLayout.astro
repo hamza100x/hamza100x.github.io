@@ -107,8 +107,6 @@ const schema =
       name="twitter:image"
     />
 
-    <link href="https://cdn.fontshare.com" rel="preconnect" />
-
     <link href={Astro.url.href} rel="canonical" />
     <script
       is:inline
@@ -116,6 +114,7 @@ const schema =
       type="application/ld+json"
     />
     <script
+      is:inline
       src="https://analytics.ahrefs.com/analytics.js"
       data-key={import.meta.env.AHREFS_ANALYTICS_KEY}
       async></script>

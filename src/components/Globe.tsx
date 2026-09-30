@@ -9,7 +9,7 @@ type Props = {
   enableHover?: boolean;
 };
 
-const GlobeComponent = ({ isStatic, class: className, enableHover }: Props) => {
+const GlobeComponent = ({ isStatic, enableHover }: Props) => {
   let mapContainer: HTMLDivElement | undefined;
 
   const visitedCountries = SITE.visitedCountries;
@@ -104,7 +104,7 @@ const GlobeComponent = ({ isStatic, class: className, enableHover }: Props) => {
             .style("left", (event.pageX + 10) + "px")
             .style("top", (event.pageY - 10) + "px");
         })
-        .on("mouseout", function(event, d: any) {
+        .on("mouseout", function(_event, d: any) {
           const data = d as { properties: { name: string } };
           const isVisited = visitedCountries.includes(data.properties.name);
           const element = d3.select(this);
@@ -121,7 +121,6 @@ const GlobeComponent = ({ isStatic, class: className, enableHover }: Props) => {
     }
 
     let isPaused = false;
-    let isDragging = false;
     let previousMousePosition: [number, number] | null = null;
 
     const updatePaths = () => {
@@ -138,7 +137,6 @@ const GlobeComponent = ({ isStatic, class: className, enableHover }: Props) => {
         })
         .call(d3.drag<SVGSVGElement, unknown>()
           .on("start", function(event) {
-            isDragging = true;
             isPaused = true;
             previousMousePosition = [event.x, event.y];
           })
@@ -157,7 +155,6 @@ const GlobeComponent = ({ isStatic, class: className, enableHover }: Props) => {
             }
           })
           .on("end", function() {
-            isDragging = false;
             previousMousePosition = null;
           }));
     }

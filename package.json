@@ -9,13 +9,12 @@
     "preview": "astro preview",
     "astro": "astro",
     "site-setup": "node scripts/setup.mjs",
-    "eslint": "eslint 'src/**/*.{js,astro}'",
+    "eslint": "eslint src",
     "check": "astro check",
     "prepare": "husky"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.8",
-    "@astrojs/netlify": "^7.0.6",
     "@astrojs/rss": "^4.0.18",
     "@astrojs/sitemap": "^3.7.2",
     "@astrojs/solid-js": "^6.0.1",
@@ -38,7 +37,6 @@
     "@unocss/postcss": "^66.6.7",
     "@unocss/preset-uno": "^66.6.7",
     "@unocss/reset": "^66.6.7",
-    "autoprefixer": "^10.4.27",
     "eslint": "^10.1.0",
     "eslint-plugin-astro": "^1.6.0",
     "eslint-plugin-jsx-a11y": "^6.10.2",

@@ -1,28 +1,16 @@
 // uno.config.ts
-import { defineConfig, presetWind3, presetWebFonts } from "unocss";
+import { defineConfig, presetWind3 } from "unocss";
 
 export default defineConfig({
   content: {
     filesystem: [
-      // Narrow scope to specific directories
-      "src/**/*.{html,js,ts,jsx,tsx,vue,svelte,astro}}",
-      "src/components/**/*.{html,js,ts,jsx,tsx,vue,svelte,astro}}",
-      "src/pages/**/*.{html,js,ts,jsx,tsx,vue,svelte,astro}}",
-      "src/layouts/**/*.{html,js,ts,jsx,tsx,vue,svelte,astro}}"
-    ],  },
+      "src/**/*.{astro,css,js,ts,jsx,tsx}",
+    ],
+  },
   theme: {
     boxShadow: {
       custom: `2px 2px 0`,
       "custom-hover": `1px 1px 0`,
-    },
-    fontFamily: {
-      sans: ["CabinetGrotesk", "Satoshi"],
-    },
-    gridTemplateRows: {
-      "auto-250": "repeat(auto-fill, 250px)",
-    },
-    gridTemplateColumns: {
-      "4-minmax": "repeat(4, minmax(150px, 1fr))",
     },
     colors: {
       darkslate: {
@@ -52,12 +40,5 @@ export default defineConfig({
   },
   presets: [
     presetWind3(),
-    presetWebFonts({
-      provider: "fontshare",
-      fonts: {
-        sans: ["Cabinet Grotesk", "Satoshi"],
-        serif: "Zodiak",
-      },
-    }),
   ],
 });
