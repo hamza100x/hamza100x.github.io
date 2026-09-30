@@ -7,8 +7,7 @@ import icon from "astro-icon";
 import solidJs from "@astrojs/solid-js";
 import { remarkReadingTime } from "./src/lib/remark-reading-time.mjs";
 
-import svelte from "@astrojs/svelte";
-
+<<<<<<< HEAD
 
 const envSiteUrl = process.env.SITE_URL ?? "https://hamza100x.github.io";
 const site = envSiteUrl.endsWith("/") ? envSiteUrl : `${envSiteUrl}/`;
@@ -63,7 +62,6 @@ export default defineConfig({
     solidJs(),
     UnoCSS({ injectReset: true }),
     icon(),
-    svelte(),
   ],
   markdown: {
     remarkPlugins: [remarkReadingTime],
