@@ -26,6 +26,7 @@ export const SITE = {
   visitedCountries: [
     "France",
     "Germany",
+    "Switzerland",
     "Austria",
     "United Arab Emirates",
     "Poland",
