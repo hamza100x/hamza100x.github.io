@@ -3,12 +3,14 @@ import Card from "./Card/index.astro";
 import Pulse from "./Pulse.astro";
 ---
 
-<Card colSpan="md:col-span-1" rowSpan="md:row-span-1" padding="p-4">
+<Card colSpan="md:col-span-1" rowSpan="md:row-span-2" padding="p-4">
   <div class="flex justify-between w-full items-start mb-1">
     <div class="flex">
       <h2 class="text-white text-xl font-bold mr-2">Now</h2>
     </div>
     <Pulse />
   </div>
-  <p class="text-xs">BI &amp; Application Developer Intern @ Boehringer Ingelheim</p>
+  <p class="text-sm leading-relaxed break-words">
+    BI &amp; Application Developer Intern @ Boehringer Ingelheim
+  </p>
 </Card>
