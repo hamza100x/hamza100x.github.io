@@ -1,0 +1,1 @@
+import{a as n}from"./index.DkWb9Ab5.js";function e(){const t=document.getElementById("memoji-avatar");t&&n(t,{y:[-10,10,-10]},{duration:3,repeat:1/0,ease:"easeInOut"})}document.readyState==="loading"?document.addEventListener("DOMContentLoaded",()=>{e()}):e();
